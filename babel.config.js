@@ -1,7 +1,7 @@
-module.exports = function(api) {
-	api.cache(true);
+module.exports = /* function(api)*/ {
+	// api.cache(true);
 
-	return {
+	// return {
 		presets: [
 			"@babel/preset-typescript",
 			"@babel/preset-react",
@@ -9,6 +9,7 @@ module.exports = function(api) {
 		],
 		plugins: [
 			"@babel/plugin-proposal-class-properties"
-		]
-	};	
+		],
+		sourceType: 'unambiguous',
+	// };
 }

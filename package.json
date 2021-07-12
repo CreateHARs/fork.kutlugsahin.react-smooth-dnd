@@ -1,12 +1,13 @@
 {
   "name": "react-smooth-dnd",
-  "version": "0.11.1",
+  "version": "0.11.1-patch.1",
   "description": "Drag and Drop library",
   "main": "./dist/index.js",
   "scripts": {
     "bundle": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
+    "esbuild": "node esbuild.js",
     "tsc": "tsc --emitDeclarationOnly --outDir dist",
-    "build": "npm run tsc && npm run bundle"
+    "build": "npm run tsc && npm run esbuild"
   },
   "types": "./dist/index.d.ts",
   "files": [
@@ -42,13 +43,14 @@
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-uglify": "6.0.2",
     "typescript": "3.3.3333",
-    "@types/react": "^16.3.0"
+    "@types/react": "^16.3.0",
+    "esbuild": "0.12.6"
   },
   "peerDependencies": {
     "react": "^16.3.0"
   },
   "dependencies": {
-    "smooth-dnd": "0.12.1",
+    "smooth-dnd": "0.12.1-patch.1",
     "prop-types":">=15.6.0"
   }
 }

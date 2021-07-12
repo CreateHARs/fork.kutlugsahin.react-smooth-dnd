@@ -1,7 +1,18 @@
 import React, { Component, CSSProperties } from 'react';
 import PropTypes from 'prop-types';
-import { smoothDnD as container, ContainerOptions, SmoothDnD } from 'smooth-dnd';
-import { dropHandlers } from 'smooth-dnd';
+// import { /*smoothDnD as container,*/ ContainerOptions, SmoothDnD } from 'smooth-dnd';
+// import { dropHandlers } from 'smooth-dnd';
+// const SmoothDnd = require('smooth-dnd')
+// const {
+//   smoothDnD : container,
+//   // ContainerOptions,
+//   // SmoothDnD,
+//   dropHandlers,
+// } = SmoothDnd
+// type ContainerOptions = any
+// type SmoothDnD = any
+import { smoothDnD as container, ContainerOptions, SmoothDnD, dropHandlers } from './smooth-dnd';
+
 
 container.dropHandler = dropHandlers.reactDropHandler().handler;
 container.wrapChild = false;
@@ -11,7 +22,7 @@ interface ContainerProps extends ContainerOptions {
 	style?: CSSProperties;
 }
 
-class Container extends Component<ContainerProps> {
+class Container extends Component<ContainerProps, void> {
 	public static propTypes = {
 		behaviour: PropTypes.oneOf(['move', 'copy', 'drop-zone', 'contain']),
 		groupName: PropTypes.string,
@@ -134,7 +145,7 @@ class Container extends Component<ContainerProps> {
       }
 
       return result;
-    },{}) as ContainerOptions;
+    },{}) //as ContainerOptions;
   }
 }
 
