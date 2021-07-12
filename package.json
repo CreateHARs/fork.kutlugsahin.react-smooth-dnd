@@ -7,7 +7,7 @@
     "bundle": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
     "esbuild": "node esbuild.js",
     "tsc": "tsc --emitDeclarationOnly --outDir dist",
-    "build": "npm run tsc && npm run esbuild"
+    "build": "yarn run tsc && yarn run esbuild"
   },
   "types": "./dist/index.d.ts",
   "files": [
