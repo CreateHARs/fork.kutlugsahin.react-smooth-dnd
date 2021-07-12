@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { constants } from 'smooth-dnd';
-// const { constants } = require('smooth-dnd')
-import { constants } from './smooth-dnd';
+import { constants } from 'smooth-dnd';
 const {
 	wrapperClass
 } = constants;
-// import { wrapperClass } from 'smooth-dnd';
 
 export interface DraggableProps {
 	render?: () => React.ReactElement;

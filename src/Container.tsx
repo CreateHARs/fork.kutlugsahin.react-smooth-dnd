@@ -1,18 +1,7 @@
 import React, { Component, CSSProperties } from 'react';
 import PropTypes from 'prop-types';
-// import { /*smoothDnD as container,*/ ContainerOptions, SmoothDnD } from 'smooth-dnd';
-// import { dropHandlers } from 'smooth-dnd';
-// const SmoothDnd = require('smooth-dnd')
-// const {
-//   smoothDnD : container,
-//   // ContainerOptions,
-//   // SmoothDnD,
-//   dropHandlers,
-// } = SmoothDnd
-// type ContainerOptions = any
-// type SmoothDnD = any
-import { smoothDnD as container, ContainerOptions, SmoothDnD, dropHandlers } from './smooth-dnd';
-
+import { smoothDnD as container, ContainerOptions, SmoothDnD } from 'smooth-dnd';
+import { dropHandlers } from 'smooth-dnd';
 
 container.dropHandler = dropHandlers.reactDropHandler().handler;
 container.wrapChild = false;
@@ -145,7 +134,7 @@ class Container extends Component<ContainerProps, void> {
       }
 
       return result;
-    },{}) //as ContainerOptions;
+    },{}) as ContainerOptions;
   }
 }
 
