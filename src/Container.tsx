@@ -11,7 +11,7 @@ interface ContainerProps extends ContainerOptions {
 	style?: CSSProperties;
 }
 
-class Container extends Component<ContainerProps, void> {
+class Container extends Component<ContainerProps, any> {
 	public static propTypes = {
 		behaviour: PropTypes.oneOf(['move', 'copy', 'drop-zone', 'contain']),
 		groupName: PropTypes.string,

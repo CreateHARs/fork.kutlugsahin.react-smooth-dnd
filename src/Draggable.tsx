@@ -10,7 +10,7 @@ export interface DraggableProps {
 	className?: string;
 }
 
-class Draggable extends Component<DraggableProps, void> {
+class Draggable extends Component<DraggableProps, any> {
 	public static propsTypes = {
 		render: PropTypes.func,
 		className: PropTypes.string,
